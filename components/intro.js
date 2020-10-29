@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Layout from '../components/layout';
 import { useContext } from 'react';
 import {Accordion, AccordionContext, Button, useAccordionToggle, Card} from 'react-bootstrap';
+import { useAuth0 } from '@auth0/auth0-react';
+import Header from './headerCompoent';
 
 function ContextAwareToggle({ children, eventKey, callback }) {
 	const currentEventKey = useContext(AccordionContext);
@@ -27,6 +29,15 @@ function ContextAwareToggle({ children, eventKey, callback }) {
 
 
 export default function Intro(props) {
+
+	const { isAuthenticated, user } = useAuth0();
+
+	let greeting = 'Welcome to Project Connect mapping game';
+
+	if (isAuthenticated) {
+		greeting = 'Hello, ' + user.name + '! Welcome to Project Connect mapping game'
+	}
+	
   return (
     <Layout myClass="intro">
 		<Head>
@@ -35,14 +46,10 @@ export default function Intro(props) {
 			<link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />
 		</Head>
 
-		<header className="masthead p-3">
-		    <div className="inner">
-		      <p className="masthead-brand">PROJECT CONNECT</p>
-		    </div>
-		</header>
+		<Header/>
 
 		<div className="main">
-			<h1>Welcome to Project Connect mapping game</h1>
+			<h1>{greeting}</h1>
 			<p>With just one minute you can help us map 5 schools.</p>
 		</div>
 

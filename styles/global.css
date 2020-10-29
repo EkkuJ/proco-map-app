@@ -48,6 +48,7 @@ a:hover {
   width: 100%;
   text-transform: uppercase;
   border-radius: 0;
+  border: none;
   font-size: 12px;
   font-stretch: normal;
   padding: 1.5em;
@@ -56,6 +57,7 @@ a:hover {
   letter-spacing: 1px;
   text-align: center;
   color: #ffffff;
+  background-color: #49BBD6;
 }
 
 .card {
@@ -99,16 +101,17 @@ body {
  * Header
  */
 .masthead {
-  background-color: #141923;
+  background-color: #FFA812;
   font-style: sans-serif;
   font-weight: 100;
 }
 
 .masthead-brand {
   margin-bottom: 0;
-  color: #FFF;
+  color: #333333;
   size: 1.5em;
   letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .inverse {
