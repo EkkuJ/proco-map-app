@@ -4,6 +4,8 @@
 
 Refer to [unicef/projectconnect-app](https://github.com/unicef/projectconnect-app) for an overview.
 
+Refer to [the submission markdown file](/FULLSTACK_SUBMISSION.md) for Full Stack -web development project submission information.
+
 ## 🛠 Architecture
 
 This webapp is built using [Next.js](https://nextjs.org/) as a React Framework and deployed using [Vercel](https://vercel.com/).
